@@ -83,19 +83,23 @@ function exitAccount(){
     exitAccountBtn.style.display = "none";
     logIn.style.display = "inline";
     signUp.style.display = "inline";
+    localStorage.setItem("ShowName","No");
 }
 
 function signChack(){
     let isName = localStorage.getItem("Name");
     let userName = JSON.parse(localStorage.getItem("Name"));
+    let showName = localStorage.getItem("ShowName");
 
     if( isName ){
-        logIn.style.display = "none";
-        signUp.style.display = "none";
-        loginSignup.insertAdjacentHTML("afterbegin","<span id=\"userAccount\">" + userName + "</span><span id=\"exitAccountBtn\"> / خروج </span>");
-        const userAccount = $.querySelector("userAccount");
-        const exitAccountBtn = $.querySelector("#exitAccountBtn");
-        exitAccountBtn.addEventListener("click",exitAccount);
+        if( showUser == "Yes"){
+            logIn.style.display = "none";
+            signUp.style.display = "none";
+            loginSignup.insertAdjacentHTML("afterbegin","<span id=\"userAccount\">" + userName + "</span><span id=\"exitAccountBtn\"> / خروج </span>");
+            const userAccount = $.querySelector("userAccount");
+            const exitAccountBtn = $.querySelector("#exitAccountBtn");
+            exitAccountBtn.addEventListener("click",exitAccount);
+        }
     }
 };
 
