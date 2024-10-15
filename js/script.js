@@ -53,10 +53,10 @@ window.addEventListener("load",function(){
 
 function appendProducts(item){
 
-    NewProducts.insertAdjacentHTML("beforeend" , "<li><div id=\"item.categoryName\" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
-    bestSellerItem.insertAdjacentHTML("beforeend" , "<li><div id=\"item.categoryName\" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
-    otherItem.insertAdjacentHTML("beforeend" , "<li><div id=\"item.categoryName\" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
-    otherItem.insertAdjacentHTML("beforeend" , "<li><div id=\"item.categoryName\" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
+    NewProducts.insertAdjacentHTML("beforeend" , "<li><div id="+ item.categoryName +" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
+    bestSellerItem.insertAdjacentHTML("beforeend" , "<li><div id="+ item.categoryName +" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
+    otherItem.insertAdjacentHTML("beforeend" , "<li><div id="+ item.categoryName +" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
+    otherItem.insertAdjacentHTML("beforeend" , "<li><div id="+ item.categoryName +" onclick=\"goCart(event)\"><img class=\"ProductsImg\" src=\""+ item.img +"\" alt=\"ProductsImg\"><p class=\"ProductsName\">"+ item.name +"</p><p class=\"price\">"+ item.pricy +" تومان</p></div></li>");
 
 }
 
